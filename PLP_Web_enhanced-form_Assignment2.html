@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced HTML5 Form Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f7f7f7;
+        }
+        header, footer {
+            background: #003366;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        main {
+            margin-top: 20px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #999;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 3px;
+            border-radius: 4px;
+            border: 1px solid #aaa;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid #555;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .media-section {
+            background: #eef3f9;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Enhanced HTML5 Form & Content Example</h1>
+</header>
+
+<main>
+
+    <!-- SECTION 1: WELL-STRUCTURED CONTENT -->
+    <section aria-labelledby="content-heading">
+        <h2 id="content-heading">Structured Content Examples</h2>
+
+        <h3>✔ Ordered & Unordered Lists</h3>
+        <ul>
+            <li>HTML5 Semantic Tags</li>
+            <li>Forms & Validation</li>
+            <li>Media Elements</li>
+        </ul>
+
+        <ol>
+            <li>Plan your form</li>
+            <li>Add validation</li>
+            <li>Submit and review</li>
+        </ol>
+
+        <h3>✔ Table Example</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Input Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Full Name</td>
+                    <td>Text</td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td>Email</td>
+                </tr>
+                <tr>
+                    <td>Birth Date</td>
+                    <td>Date</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="media-section">
+            <h3>✔ Media Elements</h3>
+
+            <p><strong>Image:</strong></p>
+            <img src="https://via.placeholder.com/300x150" alt="Placeholder example image">
+
+            <p><strong>Audio:</strong></p>
+            <audio controls>
+                <source src="sample.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <p><strong>Video:</strong></p>
+            <video controls width="320">
+                <source src="sample.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <p><strong>Canvas (Graphics Placeholder):</strong></p>
+            <canvas id="myCanvas" width="320" height="120" style="border:1px solid #333;"></canvas>
+
+            <script>
+                const c = document.getElementById("myCanvas");
+                const ctx = c.getContext("2d");
+                ctx.fillStyle = "blue";
+                ctx.fillRect(10, 10, 150, 80);
+            </script>
+        </div>
+    </section>
+
+
+    <!-- SECTION 2: COMPLETE HTML5 FORM -->
+    <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Enhanced HTML5 Registration Form</h2>
+
+        <form action="#" method="post">
+
+            <!-- PERSONAL INFO -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullname">Full Name</label>
+                <input 
+                    type="text" 
+                    id="fullname" 
+                    name="fullname" 
+                    placeholder="Enter your full name" 
+                    required 
+                    autocomplete="name"
+                >
+
+                <label for="email">Email Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="example@email.com" 
+                    required 
+                    autocomplete="email"
+                >
+
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+1234567890"
+                    autocomplete="tel"
+                    required
+                >
+
+                <label for="dob">Date of Birth</label>
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    required
+                >
+            </fieldset>
+
+            <!-- ACCOUNT INFO -->
+            <fieldset>
+                <legend>Account Details</legend>
+
+                <label for="username">Username</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username"
+                    placeholder="Choose a username"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Enter a secure password" 
+                    required
+                >
+
+                <label for="role">User Role</label>
+                <select id="role" name="role" required>
+                    <option value="">-- Select Role --</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="admin">Administrator</option>
+                </select>
+            </fieldset>
+
+            <!-- PREFERENCES -->
+            <fieldset>
+                <legend>Preferences</legend>
+
+                <label>Gender</label>
+                <input type="radio" name="gender" value="male" required> Male
+                <br>
+                <input type="radio" name="gender" value="female"> Female
+                <br>
+                <input type="radio" name="gender" value="other"> Other
+
+                <label>Interests</label>
+                <input type="checkbox" name="interest" value="coding"> Coding
+                <br>
+                <input type="checkbox" name="interest" value="design"> Design
+                <br>
+                <input type="checkbox" name="interest" value="gaming"> Gaming
+            </fieldset>
+
+            <!-- READONLY FIELD -->
+            <fieldset>
+                <legend>Read-Only Information</legend>
+
+                <label for="member-id">Membership ID</label>
+                <input 
+                    type="text" 
+                    id="member-id" 
+                    value="ID-2025-001" 
+                    readonly
+                >
+            </fieldset>
+
+            <button type="submit" style="
+                padding:10px 20px;
+                background:#003366;
+                color:white;
+                border:none;
+                border-radius:5px;
+                font-size:16px;
+            ">Submit Form</button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Enhanced Form Example. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
